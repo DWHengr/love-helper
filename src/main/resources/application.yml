@@ -1,6 +1,7 @@
 server:
   port: 11520
 
+#??
 wechat:
   appid: x
   secret: x
@@ -8,4 +9,10 @@ wechat:
   get-user-list: https://api.weixin.qq.com/cgi-bin/user/get
   send-template-msg-url: https://api.weixin.qq.com/cgi-bin/message/template/send
   drink-water-template-id: x
+
+#??
+amap:
+  key: x
+  city: x
+  weather-url: https://restapi.amap.com/v3/weather/weatherInfo
 
