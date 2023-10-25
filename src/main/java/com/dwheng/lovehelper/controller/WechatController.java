@@ -1,0 +1,22 @@
+package com.dwheng.lovehelper.controller;
+
+import com.dwheng.lovehelper.wechat.WechatService;
+import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
+
+/**
+ * @author: dwh
+ **/
+@RestController
+@RequestMapping("/api/wechat")
+public class WechatController {
+
+    @Resource
+    WechatService wechatService;
+
+    @GetMapping(value = "/token/get")
+    public String token() {
+        return wechatService.getWechatToken();
+    }
+}

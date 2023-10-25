@@ -11,4 +11,8 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties(prefix = "wechat")
 public class WeChatConfig {
+    private String appid;
+    private String secret;
+    private String getAccessTokenUrl;
+    private String sendTemplateMsgUrl;
 }
