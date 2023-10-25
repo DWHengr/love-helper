@@ -2,7 +2,10 @@ server:
   port: 11520
 
 wechat:
-  appid: xx
-  secret: xx
-  get-access-token-url: xx
-  send-template-msg-url: xx
+  appid: x
+  secret: x
+  get-access-token-url: https://api.weixin.qq.com/cgi-bin/token
+  get-user-list: https://api.weixin.qq.com/cgi-bin/user/get
+  send-template-msg-url: https://api.weixin.qq.com/cgi-bin/message/template/send
+  drink-water-template-id: x
+
