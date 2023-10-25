@@ -50,4 +50,15 @@ public class WechatService {
         }
         return null;
     }
+
+    public void sendTemplateMsg(String token, WechatTemplateMsg msg) {
+        String url = weChatConfig.getSendTemplateMsgUrl() +
+                "?access_token=" + token;
+        try {
+            String response = OkHttpUtils.postResponseWithParamsInJson(url, JSONObject.toJSONString(msg));
+            log.info("response ---> {}", response);
+        } catch (Exception e) {
+            log.error("token获取失败:{} {}", e.getMessage(), e.getStackTrace());
+        }
+    }
 }
