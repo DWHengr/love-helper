@@ -15,7 +15,7 @@ public class CaffeineCacheConfig {
     private final long token_expire_time = 7000;
 
     @Bean
-    public Cache<String, String> caffeineCache() {
+    public Cache<String, Object> caffeineCache() {
         return Caffeine.newBuilder()
                 // 设置最后一次写入后经过固定时间过期
                 .expireAfterWrite(token_expire_time, TimeUnit.SECONDS)

@@ -19,4 +19,10 @@ public class WechatController {
     public String token() {
         return wechatService.getWechatToken();
     }
+
+    @GetMapping(value = "/userlist/get")
+    public Object userlist() {
+        String wechatToken = wechatService.getWechatToken();
+        return wechatService.getUserList(wechatToken);
+    }
 }

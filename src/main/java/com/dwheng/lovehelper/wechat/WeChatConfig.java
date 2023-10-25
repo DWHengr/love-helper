@@ -14,5 +14,7 @@ public class WeChatConfig {
     private String appid;
     private String secret;
     private String getAccessTokenUrl;
+    private String getUserList;
     private String sendTemplateMsgUrl;
+    private String drinkWaterTemplateId;
 }
