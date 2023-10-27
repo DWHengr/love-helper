@@ -1,7 +1,7 @@
 server:
   port: 11520
 
-#??
+#微信
 wechat:
   appid: x
   secret: x
@@ -10,9 +10,16 @@ wechat:
   send-template-msg-url: https://api.weixin.qq.com/cgi-bin/message/template/send
   drink-water-template-id: x
 
-#??
+#高德
 amap:
   key: x
   city: x
   weather-url: https://restapi.amap.com/v3/weather/weatherInfo
+
+#天行
+tian:
+  key: x
+  dujitang-url: https://apis.tianapi.com/dujitang/index
+  zaoan-url: https://apis.tianapi.com/zaoan/index
+  wanan-url: https://apis.tianapi.com/wanan/index
 
