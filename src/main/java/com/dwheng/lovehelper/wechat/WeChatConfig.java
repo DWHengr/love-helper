@@ -17,4 +17,7 @@ public class WeChatConfig {
     private String getUserList;
     private String sendTemplateMsgUrl;
     private String drinkWaterTemplateId;
+    private String zaoanTemplateId;
+    private String xiabanTemplateId;
+    private String wananTemplateId;
 }

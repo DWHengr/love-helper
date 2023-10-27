@@ -98,6 +98,26 @@ public class WechatService {
     }
 
     /**
+     * 根据模板发送消息给指定用户
+     *
+     * @param msg
+     */
+    public void sendTemplateMsgToUser(WechatTemplateMsg msg, String user) {
+        String token = getWechatToken();
+        String url = weChatConfig.getSendTemplateMsgUrl() +
+                "?access_token=" + token;
+        try {
+            msg.setTouser(user);
+            log.info(JSONObject.toJSONString(msg));
+            String response = OkHttpUtils.postResponseWithParamsInJson(url, JSONObject.toJSONString(msg));
+            log.info("response ---> {}", response);
+        } catch (Exception e) {
+            log.error("token获取失败:{} {}", e.getMessage(), e.getStackTrace());
+        }
+
+    }
+
+    /**
      * 根据模板发送消息给所以用户
      *
      * @param msg

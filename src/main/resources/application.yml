@@ -8,7 +8,10 @@ wechat:
   get-access-token-url: https://api.weixin.qq.com/cgi-bin/token
   get-user-list: https://api.weixin.qq.com/cgi-bin/user/get
   send-template-msg-url: https://api.weixin.qq.com/cgi-bin/message/template/send
-  drink-water-template-id: x
+  drink-water-template-id: EMPW5c36TqqWJSp_2gArp9Fusrvu1Bbv1lxhpK0bW4w
+  zaoan-template-id: rAEnMXsA9ooVAK4jcTSI696cWkXkxnS-nNq5h2P7tl4
+  xiaban-template-id: MmPo3Mw98BDs51cKWVvDsw_zq3qMZv82ndo9JlR010g
+  wanan-template-id: nkFrQY1d4F7gVbrUVA1sMlWXyZRdCUCQ9B3YU8BErvI
 
 #高德
 amap:
