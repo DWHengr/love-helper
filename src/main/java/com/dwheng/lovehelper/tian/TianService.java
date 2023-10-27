@@ -65,5 +65,21 @@ public class TianService {
         return null;
     }
 
+    public String getOne() {
+        String url = tianConfig.getOneUrl() +
+                "?key=" + tianConfig.getKey();
+        try {
+            String response = OkHttpUtils.getResponse(url);
+            JSONObject jsonObject = JSONObject.parseObject(response);
+            if (null != jsonObject) {
+                String caihongpi = jsonObject.getJSONObject("result").getString("word");
+                return caihongpi;
+            }
+        } catch (Exception e) {
+            log.error("晚安获取失败:{} {}", e.getMessage(), e.getStackTrace());
+        }
+        return null;
+    }
+
 
 }

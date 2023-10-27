@@ -15,4 +15,5 @@ public class TianConfig {
     private String dujitangUrl;
     private String zaoanUrl;
     private String wananUrl;
+    private String oneUrl;
 }
