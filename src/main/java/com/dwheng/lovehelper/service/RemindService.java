@@ -2,6 +2,7 @@ package com.dwheng.lovehelper.service;
 
 import com.alibaba.fastjson.JSONObject;
 import com.dwheng.lovehelper.amap.AmapService;
+import com.dwheng.lovehelper.tian.TianService;
 import com.dwheng.lovehelper.wechat.WeChatConfig;
 import com.dwheng.lovehelper.wechat.WechatService;
 import com.dwheng.lovehelper.wechat.WechatTemplateMsg;
@@ -24,6 +25,9 @@ public class RemindService {
     @Resource
     AmapService amapService;
 
+    @Resource
+    TianService tianService;
+
     public void remindDrinkWater(String msg) {
         String drinkWaterTemplateId = weChatConfig.getDrinkWaterTemplateId();
         JSONObject weatherJson = amapService.getWeather();
@@ -33,7 +37,8 @@ public class RemindService {
                 .addData("weather", weatherJson.getString("weather"))
                 .addData("temperature", weatherJson.getString("temperature"))
                 .addData("humidity", weatherJson.getString("humidity"))
-                .addData("windpower", weatherJson.getString("windpower"));
+                .addData("windpower", weatherJson.getString("windpower"))
+                .addData("caihongpi", tianService.getDujitang());
         wechatService.sendTemplateMsgToAllUser(wechatTemplateMsg);
     }
 
